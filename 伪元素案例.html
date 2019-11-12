@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>伪元素案例</title>
+  <style>
+    @font-face {
+      font-family: 'iconfont';
+      src: url("./fonts/iconfont.eot");
+      src: url("./fonts/iconfont.eot?#iefix") format('embedded-opentype'),
+        url("./fonts/iconfont.woff") format('woff'),
+        url("./fonts/iconfont.ttf") format('truetype'),
+        url("./fonts/iconfont.svg#iconfont") format('svg');
+    }
+    div {
+      position: relative;
+      width: 250px;
+      height: 35px;
+      border: 1px solid red;
+      position: relative;
+    }
+    div::after{
+      position: absolute;
+      font-family: 'iconfont';
+      content: "\e6bb";
+      top:10px;
+      right: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+  
+</body>
+
+</html>

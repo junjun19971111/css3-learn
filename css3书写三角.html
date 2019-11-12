@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>css书写三角</title>
+  <style>
+    div {
+      position: relative;
+      width: 250px;
+      height: 35px;
+      border: 1px solid #000;
+    }
+
+    div::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 10px;
+      height: 10px;
+      top: 8px;
+      right: 15px;
+      border-right: 1px solid #000;
+      border-bottom: 1px solid #000;
+      transform: rotate(45deg);
+      transition: all 0.2s;
+    }
+
+    div:hover::after {
+      top:12px;
+      transform: rotate(225deg);
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+
+</body>
+
+</html>

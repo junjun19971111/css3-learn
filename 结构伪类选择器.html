@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>结构伪类选择器</title>
+  <style>
+    /* 选择第一个 */
+    /* ul li:first-child {
+      background-color: pink;
+    } */
+
+    /* 选择最后一个 */
+    /* ul li:last-child {
+      background-color: deeppink;
+    } */
+
+    /* 选择其中第八个，想选择第几个就在括号里填几 */
+    /* ul li:nth-child(8) {
+      background-color: lightpink;
+    }  */
+    /* 选择其中的奇数 */
+    ul li:nth-child(odd) {
+      background: pink;;
+    }
+    ul li:nth-child(even) {
+      background: deeppink;
+    }
+    ul li:nth-child(5n) {
+      background: dodgerblue;
+    }
+    div span:last-of-type {
+      color: firebrick;
+    }
+    div span:first-of-type {
+      color: palegreen;
+    }
+    div span:nth-of-type(2){
+      color: palegoldenrod;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <p>我是一个p</p>
+    <span>我是span</span>
+    <span>我是span</span>
+    <span>我是span</span>
+  </div>
+  <ul>
+    <li>我是第1个</li>
+    <li>我是第2个</li>
+    <li>我是第3个</li>
+    <li>我是第4个</li>
+    <li>我是第5个</li>
+    <li>我是第6个</li>
+    <li>我是第7个</li>
+    <li>我是第8个</li>
+    <li>我是第9个</li>
+    <li>我是第10个</li>
+  </ul>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>transform-style的属性</title>
+  <style>
+    body {
+      perspective: 500px;
+    }
+    .box {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin: 100px auto;
+      transition: all 2s;
+      transform-style: preserve-3d;
+    }
+    .box div {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: pink;
+    }
+    .box div:last-child {
+      background: purple;
+      transform: rotateX(60deg);
+    }
+    .box:hover{
+      transform: rotateY(60deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>

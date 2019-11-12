@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>动画的常见属性</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background: pink;
+      /* 动画名称
+      animation-name: move;
+      /* 动画持续时间 */
+      /* animation-duration: 6s; */
+      /* 动画延迟时间播放 */
+      /* animation-delay: 1s; */
+      /* 规定动画的速度曲线 */
+      /* animation-timing-function: ease; */
+      /* 规定动画被播放的次数，默认是1 */
+      /* animation-iteration-count: infinite; */
+      /* 规定动画的下一周期是否为逆向播放 */
+      /* animation-direction: alternate; */
+      animation: move 6s linear 1s infinite alternate backwards;
+
+    }
+    div:hover{
+      /* 规定动画是否在运行，或暂停 */
+      animation-play-state: paused;
+    }
+
+    @keyframes move {
+      0% {
+        transform: translateX(0px);
+      }
+
+      25% {
+        transform: translate(1000px, 0px);
+      }
+
+      50% {
+        transform: translate(1000px, 500px);
+      }
+
+      75% {
+        transform: translate(0px, 500px);
+      }
+
+      100% {
+        transform: translate(0px, 0px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+</body>
+
+</html>
