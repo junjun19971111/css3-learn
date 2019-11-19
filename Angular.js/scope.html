@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+  <title>scope实例</title>
+</head>
+<body>
+  <div ng-app="myApp" ng-controller='myCtl'>
+    <input type="text" ng-model='name'>
+    <h2>{{name}}</h2>
+    <h2>------</h2>
+    <h2>{{greeting}}</h2>
+    <button ng-click='sayHello()'>点我</button>
+  </div>
+  <script>
+    let app = angular.module('myApp', []);
+    app.controller('myCtl', function($scope){
+      $scope.name = '妍妍';
+      $scope.sayHello = function(){
+        $scope.greeting = 'hello'+' '+$scope.name;
+      }
+
+    })
+  </script>
+</body>
+</html>

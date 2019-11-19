@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+  <title>用户验证输入</title>
+</head>
+<body>
+  <form ng-app="" name="myForm" ng-init="myText = 'test@runoob.com'">
+    Email: <input type="email" name="myAddress" ng-model='myText' required>
+    <p ng-show="myForm.myAddress.$error.email">您输入的邮箱不合法</p>
+    <h1>状态</h1>
+    <p>Valid: {{myForm.myAddress.$valid}} (如果输入的值是合法的则为 true)。</p>
+    <p>Dirty: {{myForm.myAddress.$dirty}} (如果值改变则为 true)。</p>
+    <p>Touched: {{myForm.myAddress.$touched}} (如果通过触屏点击则为 true)。</p>
+  </form>
+</body>
+</html>

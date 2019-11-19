@@ -4,10 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>首页</title>
-  <script src="./dist/main.js"></script>
+  <title>map</title>
 </head>
 <body>
-  <h2>ES modules</h2>
+  <script>
+    let myMap = new Map();
+    myMap.set(NaN, '你是哪个？');
+    let otherNan = Number('fool');
+    console.log(otherNan);
+    
+    console.log(myMap.get(otherNan));
+  </script>
 </body>
 </html>

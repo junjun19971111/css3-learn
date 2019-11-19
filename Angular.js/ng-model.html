@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+  <title>ng-model指令</title>
+</head>
+<body>
+  <div ng-app="myApp" ng-controller="myCrl">
+    名字：<input ng-model="name">
+    <p>你输入的姓名是： {{name}}</p>
+  </div>
+  <script>
+    let app = angular.module('myApp', []);
+    app.controller('myCrl', function($scope){
+      $scope.name = '妍妍';
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>自定义指令</title>
+  <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+
+<body>
+  <div ng-app="myApp" ng-controller='myCtl'>
+    <ul>
+      <li ng-repeat="x in names">{{x}}{{des}}</li>
+    </ul>
+    <p>皇叔：<span ng-bind="names[0]"></span></p>
+    <p>武圣：<span ng-bind="names[1]"></span></p>
+    <p>万人敌：<span ng-bind="names[2]"></span></p>
+  </div>
+</body>
+
+<script>
+  let app = angular.module('myApp', []);
+  app.controller('myCtl', function($scope, $rootScope){
+    $scope.names = ['刘备', '关羽', '张飞'];
+    $rootScope.des = '是人中豪杰';
+  })
+</script>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+  <title>自定义指令</title>
+</head>
+<body ng-app="myApp">
+  <!-- <my-first></my-first> -->
+  <div my-first></div>
+  <!-- <div class="my-first"></div> -->
+  <!-- directive: my-first -->
+  <script>
+    let app = angular.module('myApp', []);
+    app.directive('myFirst', function(){
+      return {
+        restrict: 'AS',
+        // restrict: 'C', //这是class类名来定义
+        // replace: true,
+        template:'<h2>我是一个Angular模板</h2>'
+      }
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+  <title>person</title>
+</head>
+
+<body>
+  <div ng-app='myPerson' ng-controller="personCtl">
+    <p>大写：{{name | uppercase}}</p>
+    <p>小写：{{name | lowercase}}</p>
+    <p>钱财：{{money | currency}}</p>
+    <p>反转：{{name | reverse}}</p>
+    请输入过滤：
+    <input type="text" ng-model="test">
+    <ul>
+      <li ng-repeat="person in persons | orderBy:'city' | filter: test">
+        {{person.name + ', 住在' + person.city}}
+      </li>
+    </ul>
+  </div>
+  <script src="personCtl.js"></script>
+</body>
+
+</html>
